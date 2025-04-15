@@ -62,8 +62,8 @@ function PlasmicHome__RenderFunc(props) {
     <React.Fragment>
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"home"}
-          data-plasmic-override={overrides.home}
+          data-plasmic-name={"homepage"}
+          data-plasmic-override={overrides.homepage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -74,7 +74,7 @@ function PlasmicHome__RenderFunc(props) {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.home
+            sty.homepage
           )}
         >
           <PageLayout
@@ -183,8 +183,8 @@ function PlasmicHome__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  home: [
-    "home",
+  homepage: [
+    "homepage",
     "homepageLayout",
     "section",
     "promptText",
@@ -239,7 +239,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "home") {
+  if (nodeName === "homepage") {
     func.displayName = "PlasmicHome";
   } else {
     func.displayName = `PlasmicHome.${nodeName}`;
@@ -271,7 +271,7 @@ function withUsePlasmicAuth(WrappedComponent) {
 
 export const PlasmicHome = Object.assign(
   // Top-level PlasmicHome renders the root element
-  withUsePlasmicAuth(makeNodeComponent("home")),
+  withUsePlasmicAuth(makeNodeComponent("homepage")),
   {
     // Helper components rendering sub-elements
     homepageLayout: makeNodeComponent("homepageLayout"),
