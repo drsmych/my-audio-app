@@ -78,9 +78,9 @@ function PlasmicHome__RenderFunc(props) {
           )}
         >
           <PageLayout
-            data-plasmic-name={"basic"}
-            data-plasmic-override={overrides.basic}
-            className={classNames("__wab_instance", sty.basic)}
+            data-plasmic-name={"homepage"}
+            data-plasmic-override={overrides.homepage}
+            className={classNames("__wab_instance", sty.homepage)}
           >
             <DataCtxReader__>
               {$ctx => (
@@ -90,12 +90,12 @@ function PlasmicHome__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.section)}
                 >
                   <div
-                    data-plasmic-name={"textMain"}
-                    data-plasmic-override={overrides.textMain}
+                    data-plasmic-name={"promptText"}
+                    data-plasmic-override={overrides.promptText}
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.textMain
+                      sty.promptText
                     )}
                   >
                     {"<some text>"}
@@ -185,27 +185,35 @@ function PlasmicHome__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "basic",
+    "homepage",
     "section",
-    "textMain",
+    "promptText",
     "buttonA",
     "buttonC",
     "buttonB",
     "buttonD"
   ],
 
-  basic: [
-    "basic",
+  homepage: [
+    "homepage",
     "section",
-    "textMain",
+    "promptText",
     "buttonA",
     "buttonC",
     "buttonB",
     "buttonD"
   ],
 
-  section: ["section", "textMain", "buttonA", "buttonC", "buttonB", "buttonD"],
-  textMain: ["textMain"],
+  section: [
+    "section",
+    "promptText",
+    "buttonA",
+    "buttonC",
+    "buttonB",
+    "buttonD"
+  ],
+
+  promptText: ["promptText"],
   buttonA: ["buttonA"],
   buttonC: ["buttonC"],
   buttonB: ["buttonB"],
@@ -266,9 +274,9 @@ export const PlasmicHome = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
-    basic: makeNodeComponent("basic"),
+    homepage: makeNodeComponent("homepage"),
     section: makeNodeComponent("section"),
-    textMain: makeNodeComponent("textMain"),
+    promptText: makeNodeComponent("promptText"),
     buttonA: makeNodeComponent("buttonA"),
     buttonC: makeNodeComponent("buttonC"),
     buttonB: makeNodeComponent("buttonB"),

@@ -24,7 +24,7 @@
     grid-column: 4;
   }
 }
-.basic:global(.__wab_instance):global(.__wab_instance) {
+.homepage:global(.__wab_instance):global(.__wab_instance) {
   position: relative;
   transition-property: all;
   transition-duration: 1s;
@@ -51,7 +51,7 @@
 .section > * {
   grid-column: 4;
 }
-.textMain {
+.promptText {
   position: relative;
   width: 250px;
   height: 160px;
