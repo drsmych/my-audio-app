@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "files",
@@ -41,7 +41,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "jkU633o1Cz7HrJdwdxhVHk",
@@ -95,7 +96,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -495,29 +497,16 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "arPJ2mTnAS5GNcPYTirhFr",
       "projectApiToken": "ekWqXv1lB0P7oZ3F0J8G6uToN9qNWDPGWSHRPTgISTtFCA8GsZfyN41SLEQerQnvSvQlrIYiDBx6Dk4qsKuIg",
-      "projectName": "App starter",
+      "projectName": "Daily",
       "version": "latest",
       "cssFilePath": "plasmic/app_starter/plasmic.module.css",
       "components": [
-        {
-          "id": "r7DdHzAofmHi",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "arPJ2mTnAS5GNcPYTirhFr",
-          "renderModuleFilePath": "plasmic/app_starter/PlasmicHomepage.jsx",
-          "importSpec": {
-            "modulePath": "Homepage.jsx"
-          },
-          "cssFilePath": "plasmic/app_starter/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
-        },
         {
           "id": "A2ZUyja4uXKy",
           "name": "PageLayout",
@@ -530,13 +519,27 @@
           "cssFilePath": "plasmic/app_starter/PlasmicPageLayout.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "r7DdHzAofmHi",
+          "name": "Home",
+          "type": "managed",
+          "projectId": "arPJ2mTnAS5GNcPYTirhFr",
+          "renderModuleFilePath": "plasmic/daily/PlasmicHome.jsx",
+          "importSpec": {
+            "modulePath": "Home.jsx"
+          },
+          "cssFilePath": "plasmic/daily/PlasmicHome.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
         }
       ],
       "icons": [
         {
           "id": "DYfJ-YJpU7xY",
-          "name": "IconIcon",
-          "moduleFilePath": "plasmic/app_starter/icons/PlasmicIcon__Icon.jsx"
+          "name": "Asset11SvgIcon",
+          "moduleFilePath": "plasmic/app_starter/icons/PlasmicIcon__Asset11Svg.jsx"
         },
         {
           "id": "coB14TpMMq3s",
@@ -544,7 +547,18 @@
           "moduleFilePath": "plasmic/app_starter/icons/PlasmicIcon__Icon2.jsx"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "id": "b42i8y1QUU6M",
+          "name": "Asset 12.svg",
+          "filePath": "plasmic/daily/images/asset12Svg.svg"
+        },
+        {
+          "id": "gZvlKVYXGG60",
+          "name": "Firefly deep water with air bubbles floating to surface 37544.jpg",
+          "filePath": "plasmic/daily/images/fireflyDeepWaterWithAirBubblesFloatingToSurface37544Jpg.jpg"
+        }
+      ],
       "indirect": false,
       "globalContextsFilePath": "plasmic/app_starter/PlasmicGlobalContextsProvider.jsx",
       "splitsProviderFilePath": "",

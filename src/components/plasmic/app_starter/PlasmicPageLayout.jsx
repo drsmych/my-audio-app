@@ -27,8 +27,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css";
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: arPJ2mTnAS5GNcPYTirhFr/projectcss
 import sty from "./PlasmicPageLayout.module.css"; // plasmic-import: A2ZUyja4uXKy/css
-import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: DYfJ-YJpU7xY/icon
-import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: coB14TpMMq3s/icon
+import Asset11SvgIcon from "./icons/PlasmicIcon__Asset11Svg"; // plasmic-import: DYfJ-YJpU7xY/icon
 
 createPlasmicElementProxy;
 
@@ -60,8 +59,8 @@ function PlasmicPageLayout__RenderFunc(props) {
   const currentUser = useCurrentUser?.() || {};
   return (
     <RichLayout
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"homepage"}
+      data-plasmic-override={overrides.homepage}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -72,11 +71,13 @@ function PlasmicPageLayout__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.homepage
       )}
       logoElement={
-        <Icon2Icon
-          className={classNames(projectcss.all, sty.svg__hjS5I)}
+        <Asset11SvgIcon
+          data-plasmic-name={"svg"}
+          data-plasmic-override={overrides.svg}
+          className={classNames(projectcss.all, sty.svg)}
           role={"img"}
         />
       }
@@ -87,11 +88,12 @@ function PlasmicPageLayout__RenderFunc(props) {
         return __composite;
       })()}
       simpleNavTheme={(() => {
-        const __composite = { scheme: null };
-        __composite["scheme"] = "primary";
+        const __composite = { scheme: null, customBgColor: null };
+        __composite["scheme"] = "dark";
+        __composite["customBgColor"] = "#3F69B1";
         return __composite;
       })()}
-      title={"App title"}
+      title={"Daily Set"}
     >
       <LoadingBoundary
         data-plasmic-name={"loadingBoundary"}
@@ -99,12 +101,9 @@ function PlasmicPageLayout__RenderFunc(props) {
         loadingState={
           <DataCtxReader__>
             {$ctx => (
-              <div className={classNames(projectcss.all, sty.freeBox___9A1HG)}>
-                <IconIcon
-                  className={classNames(projectcss.all, sty.svg__aEpSp)}
-                  role={"img"}
-                />
-              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox___9A1HG)}
+              />
             )}
           </DataCtxReader__>
         }
@@ -152,8 +151,9 @@ function PlasmicPageLayout__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "loadingBoundary"],
-  loadingBoundary: ["loadingBoundary"]
+  homepage: ["homepage", "loadingBoundary", "svg"],
+  loadingBoundary: ["loadingBoundary"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -175,7 +175,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "homepage") {
     func.displayName = "PlasmicPageLayout";
   } else {
     func.displayName = `PlasmicPageLayout.${nodeName}`;
@@ -185,10 +185,11 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicPageLayout = Object.assign(
   // Top-level PlasmicPageLayout renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("homepage"),
   {
     // Helper components rendering sub-elements
     loadingBoundary: makeNodeComponent("loadingBoundary"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicPageLayout
     internalVariantProps: PlasmicPageLayout__VariantProps,
     internalArgProps: PlasmicPageLayout__ArgProps
