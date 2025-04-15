@@ -1,5 +1,5 @@
 import React from "react";
-import PlasmicHomepage from "./components/Homepage";
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
