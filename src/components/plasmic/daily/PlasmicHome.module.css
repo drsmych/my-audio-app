@@ -1,4 +1,4 @@
-.homepage {
+.home {
   display: grid;
   position: relative;
   width: 100%;
@@ -16,11 +16,11 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 0px;
 }
-.homepage > * {
+.home > * {
   grid-column: 4;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .homepage > * {
+  .home > * {
     grid-column: 4;
   }
 }
