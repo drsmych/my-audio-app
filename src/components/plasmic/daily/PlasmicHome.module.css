@@ -51,7 +51,7 @@
 .section > * {
   grid-column: 4;
 }
-.text__tIMdw {
+.textMain {
   position: relative;
   width: 250px;
   height: 160px;
@@ -84,7 +84,7 @@
   min-width: 0;
   padding: 8px;
 }
-.button__kBei1:global(.__wab_instance) {
+.buttonA:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   text-align: center;
@@ -100,7 +100,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.button__lyDM:global(.__wab_instance) {
+.buttonC:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   text-align: center;
@@ -128,7 +128,7 @@
   min-width: 0;
   padding: 8px;
 }
-.button__eAssz:global(.__wab_instance) {
+.buttonB:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   text-align: center;
@@ -144,7 +144,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.button__mbFRv:global(.__wab_instance) {
+.buttonD:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   text-align: center;

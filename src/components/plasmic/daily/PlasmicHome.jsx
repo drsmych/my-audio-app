@@ -90,10 +90,12 @@ function PlasmicHome__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.section)}
                 >
                   <div
+                    data-plasmic-name={"textMain"}
+                    data-plasmic-override={overrides.textMain}
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__tIMdw
+                      sty.textMain
                     )}
                   >
                     {"<some text>"}
@@ -105,10 +107,9 @@ function PlasmicHome__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.freeBox__wCr8E)}
                     >
                       <AntdButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__kBei1
-                        )}
+                        data-plasmic-name={"buttonA"}
+                        data-plasmic-override={overrides.buttonA}
+                        className={classNames("__wab_instance", sty.buttonA)}
                       >
                         <div
                           className={classNames(
@@ -121,10 +122,9 @@ function PlasmicHome__RenderFunc(props) {
                         </div>
                       </AntdButton>
                       <AntdButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__lyDM
-                        )}
+                        data-plasmic-name={"buttonC"}
+                        data-plasmic-override={overrides.buttonC}
+                        className={classNames("__wab_instance", sty.buttonC)}
                       >
                         <div
                           className={classNames(
@@ -141,10 +141,9 @@ function PlasmicHome__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.freeBox__tisQz)}
                     >
                       <AntdButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__eAssz
-                        )}
+                        data-plasmic-name={"buttonB"}
+                        data-plasmic-override={overrides.buttonB}
+                        className={classNames("__wab_instance", sty.buttonB)}
                       >
                         <div
                           className={classNames(
@@ -157,10 +156,9 @@ function PlasmicHome__RenderFunc(props) {
                         </div>
                       </AntdButton>
                       <AntdButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__mbFRv
-                        )}
+                        data-plasmic-name={"buttonD"}
+                        data-plasmic-override={overrides.buttonD}
+                        className={classNames("__wab_instance", sty.buttonD)}
                       >
                         <div
                           className={classNames(
@@ -185,9 +183,33 @@ function PlasmicHome__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "basic", "section"],
-  basic: ["basic", "section"],
-  section: ["section"]
+  root: [
+    "root",
+    "basic",
+    "section",
+    "textMain",
+    "buttonA",
+    "buttonC",
+    "buttonB",
+    "buttonD"
+  ],
+
+  basic: [
+    "basic",
+    "section",
+    "textMain",
+    "buttonA",
+    "buttonC",
+    "buttonB",
+    "buttonD"
+  ],
+
+  section: ["section", "textMain", "buttonA", "buttonC", "buttonB", "buttonD"],
+  textMain: ["textMain"],
+  buttonA: ["buttonA"],
+  buttonC: ["buttonC"],
+  buttonB: ["buttonB"],
+  buttonD: ["buttonD"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -246,6 +268,11 @@ export const PlasmicHome = Object.assign(
     // Helper components rendering sub-elements
     basic: makeNodeComponent("basic"),
     section: makeNodeComponent("section"),
+    textMain: makeNodeComponent("textMain"),
+    buttonA: makeNodeComponent("buttonA"),
+    buttonC: makeNodeComponent("buttonC"),
+    buttonB: makeNodeComponent("buttonB"),
+    buttonD: makeNodeComponent("buttonD"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,
     internalArgProps: PlasmicHome__ArgProps,
