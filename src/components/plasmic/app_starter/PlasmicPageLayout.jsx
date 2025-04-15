@@ -81,12 +81,7 @@ function PlasmicPageLayout__RenderFunc(props) {
           role={"img"}
         />
       }
-      navMenuItems={(() => {
-        const __composite = [{ path: null, name: null }];
-        __composite["0"]["path"] = `/`;
-        __composite["0"]["name"] = "Home";
-        return __composite;
-      })()}
+      navMenuItems={[{ path: "/", name: "Home" }]}
       simpleNavTheme={(() => {
         const __composite = { scheme: null, customBgColor: null };
         __composite["scheme"] = "dark";
