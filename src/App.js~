@@ -1,0 +1,14 @@
+import React from "react";
+import PlasmicHomepage from "./plasmic/PlasmicHomepage";
+
+function App() {
+  return (
+    <div>
+      <PlasmicHomepage />
+    </div>
+  );
+}
+
+export default App;
+
+
