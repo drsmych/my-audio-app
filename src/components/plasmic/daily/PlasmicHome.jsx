@@ -62,8 +62,8 @@ function PlasmicHome__RenderFunc(props) {
     <React.Fragment>
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"homepage"}
+          data-plasmic-override={overrides.homepage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -74,13 +74,13 @@ function PlasmicHome__RenderFunc(props) {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.homepage
           )}
         >
           <PageLayout
-            data-plasmic-name={"homepage"}
-            data-plasmic-override={overrides.homepage}
-            className={classNames("__wab_instance", sty.homepage)}
+            data-plasmic-name={"homepageLayout"}
+            data-plasmic-override={overrides.homepageLayout}
+            className={classNames("__wab_instance", sty.homepageLayout)}
           >
             <DataCtxReader__>
               {$ctx => (
@@ -183,9 +183,9 @@ function PlasmicHome__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  homepage: [
     "homepage",
+    "homepageLayout",
     "section",
     "promptText",
     "buttonA",
@@ -194,8 +194,8 @@ const PlasmicDescendants = {
     "buttonD"
   ],
 
-  homepage: [
-    "homepage",
+  homepageLayout: [
+    "homepageLayout",
     "section",
     "promptText",
     "buttonA",
@@ -239,7 +239,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "homepage") {
     func.displayName = "PlasmicHome";
   } else {
     func.displayName = `PlasmicHome.${nodeName}`;
@@ -271,10 +271,10 @@ function withUsePlasmicAuth(WrappedComponent) {
 
 export const PlasmicHome = Object.assign(
   // Top-level PlasmicHome renders the root element
-  withUsePlasmicAuth(makeNodeComponent("root")),
+  withUsePlasmicAuth(makeNodeComponent("homepage")),
   {
     // Helper components rendering sub-elements
-    homepage: makeNodeComponent("homepage"),
+    homepageLayout: makeNodeComponent("homepageLayout"),
     section: makeNodeComponent("section"),
     promptText: makeNodeComponent("promptText"),
     buttonA: makeNodeComponent("buttonA"),

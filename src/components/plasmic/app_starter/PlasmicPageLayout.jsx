@@ -59,8 +59,8 @@ function PlasmicPageLayout__RenderFunc(props) {
   const currentUser = useCurrentUser?.() || {};
   return (
     <RichLayout
-      data-plasmic-name={"homepage"}
-      data-plasmic-override={overrides.homepage}
+      data-plasmic-name={"homeLayout"}
+      data-plasmic-override={overrides.homeLayout}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -71,7 +71,7 @@ function PlasmicPageLayout__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.homepage
+        sty.homeLayout
       )}
       logoElement={
         <Asset11SvgIcon
@@ -151,7 +151,7 @@ function PlasmicPageLayout__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  homepage: ["homepage", "loadingBoundary", "svg"],
+  homeLayout: ["homeLayout", "loadingBoundary", "svg"],
   loadingBoundary: ["loadingBoundary"],
   svg: ["svg"]
 };
@@ -175,7 +175,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "homepage") {
+  if (nodeName === "homeLayout") {
     func.displayName = "PlasmicPageLayout";
   } else {
     func.displayName = `PlasmicPageLayout.${nodeName}`;
@@ -185,7 +185,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicPageLayout = Object.assign(
   // Top-level PlasmicPageLayout renders the root element
-  makeNodeComponent("homepage"),
+  makeNodeComponent("homeLayout"),
   {
     // Helper components rendering sub-elements
     loadingBoundary: makeNodeComponent("loadingBoundary"),
