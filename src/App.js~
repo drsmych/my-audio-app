@@ -1,14 +1,8 @@
 import React from "react";
-import PlasmicHomepage from "./plasmic/PlasmicHomepage";
+import Homepage from "./components/homepage";
 
 function App() {
-  return (
-    <div>
-      <PlasmicHomepage />
-    </div>
-  );
+  return <Homepage />;
 }
 
 export default App;
-
-
