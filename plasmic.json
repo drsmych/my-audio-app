@@ -522,17 +522,16 @@
         },
         {
           "id": "r7DdHzAofmHi",
-          "name": "Home",
+          "name": "Homepage",
           "type": "managed",
           "projectId": "arPJ2mTnAS5GNcPYTirhFr",
-          "renderModuleFilePath": "plasmic/daily/PlasmicHome.jsx",
+          "renderModuleFilePath": "plasmic/daily/PlasmicHomepage.jsx",
           "importSpec": {
-            "modulePath": "Home.jsx"
+            "modulePath": "Homepage.jsx"
           },
-          "cssFilePath": "plasmic/daily/PlasmicHome.module.css",
+          "cssFilePath": "plasmic/daily/PlasmicHomepage.module.css",
           "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
+          "componentType": "component"
         }
       ],
       "icons": [
